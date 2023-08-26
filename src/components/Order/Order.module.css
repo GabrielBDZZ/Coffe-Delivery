@@ -1,0 +1,44 @@
+.orderModal h2 {
+    display: flex;
+    font-family: 'Baloo 2', cursive;
+    font-size: 18px;
+    color: var(--gray-500);
+    background: none;
+    margin-bottom: 15px;
+}
+
+.orderContent {
+    padding: 40px;
+    background: var(--base-card);
+    border-radius: 6px;
+    width: 448px;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.orderContent p {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    color: var(--gray-300);
+    margin: 6px 0;
+}
+
+.total {
+    color: var(--gray-500);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.confirm {
+    border: none;
+    border-radius: 6px;
+    color: var(--white);
+    background: var(--yellow);
+    padding: 12px 0;
+    width: 368px;
+    margin-top: 18px;
+    font-weight: 700;
+    line-height: 160%;
+    cursor: pointer;
+}

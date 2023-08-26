@@ -1,0 +1,34 @@
+:root {
+    --white: #fff;
+    --yellow: #DBAC2C;
+    --yellow-light: #F1E9C9;
+    --yellow-dark: #C47F17;
+    --purple-light: #EBE5F9;
+    --purple: #8047F8;
+    --purple-dark: #4B2995;
+
+    --gray-000: #D7D5D5;
+    --gray-100: #8D8686;
+    --gray-300: #574F4D;
+    --gray-500: #403937;
+    --gray-700: #272221;
+
+    --base-card: #F3F2F2;
+    --base-input: #EDEDED;
+    --base-button: #E6E5E5;
+
+    --background: #FAFAFA;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+
+    background: #FAFAFA;
+
+}

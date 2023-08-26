@@ -1,0 +1,134 @@
+.modal h3{
+    font-size: 16px;
+    color: var(--gray-500);
+    display: flex;
+    background: none;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+.modal p {
+    font-size: 14px;
+    color: var(--gray-300);
+    display: flex;
+    background: none;
+}
+
+.mapPin , .dollar{
+    display: flex;
+    background: none;
+    color: var(--yellow-dark);
+}
+
+.dollar {
+    color: var(--purple);
+}
+
+.title {
+    display: flex;
+    background: none;
+}
+
+.iconContainer {
+    margin-right: 8px;
+    background: none; 
+}
+
+.textContainer {
+    background: none;
+}
+
+h2 {
+    display: flex;
+    font-family: 'Baloo 2', cursive;
+    font-size: 18px;
+    color: var(--gray-500);
+    background: none;
+    margin-bottom: 15px;
+}
+
+.adress, .payment {
+    padding: 40px;
+    background: var(--base-card);
+    border-radius: 6px;
+    width: 640px;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.adress input {
+    text-align: start;
+    padding-left: 12px;
+    display: flex;
+    border: none;
+    background: var(--base-input);
+    border-radius: 6px;
+    height: 42px;
+    margin-top: 16px;
+    margin-right: 12px;
+}
+
+.adress input:focus {
+    border: 1px solid var(--purple);
+}
+
+.cep, .numero, .bairro {
+    width: 200px;
+}
+
+.rua {
+    width: 560px;
+}
+
+.complemento {
+    width: 348px;
+}
+
+.cidade {
+    width: 276px;
+}
+
+.estado {
+    width: 60px;
+}
+
+.inline {
+    display: inline-flex;
+    background: none;
+}
+
+.inline2 {
+    display: inline-flex;
+    background: none;
+}
+
+.buttons button {
+    border: none;
+    border-radius: 6px;
+    background: var(--base-button);
+    color: var(--gray-300);
+    height: 51px;
+    width: 178px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.payment button > svg{
+    color: var(--purple);
+    background: none;
+    margin-right: 12px;
+}
+
+.buttons {
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.selected {
+    border: 1px solid var(--purple) !important;
+}

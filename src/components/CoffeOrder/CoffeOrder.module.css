@@ -1,0 +1,56 @@
+.orderContent {
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--base-button);
+    margin-bottom: 24px;
+}
+
+.orderContent img {
+    background: none;
+
+}
+
+.description {
+    background: none;
+    /* margin-left: 20px; */
+}
+
+.orderContent p {
+    display: flex;
+}
+
+.trashButton {
+    padding: 8px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border: none;
+    background: var(--base-button);
+    border-radius: 6px;
+    color: var(--gray-300);
+    cursor: pointer;
+}
+
+.trash {
+    color: var(--purple);
+    margin-right: 4px;
+    background: none;
+}
+
+.buttons {
+    display: flex;
+    background: none;
+    margin-left: -15px;
+    margin-top: 8px;
+}
+
+.coffeImg {
+    width: 64px;
+    display: flex;
+}
+
+.price {
+    font-weight: 700;
+}

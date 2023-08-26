@@ -1,0 +1,34 @@
+.input input {
+    height: 38px;
+    width: 72px;
+    border: none;
+    border-radius: 6px;
+    background: var(--base-button);
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.input {
+    display: flex;
+    background: none;
+}
+
+.increment, .decrement {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: var(--purple);
+    transform: translateX(19px);
+}
+
+.increment {
+    transform: translateX(-19px);
+}
+
+.increment img{
+    height: 15px;
+}
+
+.decrement img{
+    height: 15px;
+}

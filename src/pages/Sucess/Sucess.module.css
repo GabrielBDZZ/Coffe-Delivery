@@ -1,0 +1,73 @@
+.sucess {
+    margin: 0 160px;
+}
+
+.title h1, .description{
+    text-align: start;
+}
+
+.title h1 {
+    font-family: 'Baloo 2', cursive;
+    font-weight: 800;
+    color: var(--yellow-dark);
+    font-size: 32px;
+    /* text-align: start; */
+    /* box-sizing: border-box; */
+    width: 600px;
+}
+
+.description {
+    color: var(--gray-500);
+    font-size: 20px;
+
+    margin-top: 4px;
+}
+
+.info {
+    margin-top: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 526px;
+    
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+    linear-gradient(to left, var(--purple), var(--yellow) ) border-box;
+    border-radius: 6px;
+    border-top-right-radius: 36px;
+    border-bottom-left-radius: 36px;
+    border: 1px solid transparent;
+    
+}
+.info p {
+    margin: 20px 0;
+    margin-left: 20px;
+    text-align: start;
+    color: var(--gray-300);
+    display: flex;
+    align-items: center;
+}
+
+.mapPin, .timer, .dollar {
+    color: var(--white);
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    padding: 8px;
+    margin-right: 12px;
+}
+
+.mapPin {
+    background: var(--purple);
+}
+
+.timer {
+    background: var(--yellow);
+}
+
+.dollar {
+    background: var(--yellow-dark);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}

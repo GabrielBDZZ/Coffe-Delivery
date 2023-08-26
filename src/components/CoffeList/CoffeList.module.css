@@ -1,0 +1,8 @@
+.title {
+    font-family: 'Baloo 2', cursive;
+    display: flex;
+    margin: 32px 160px;
+    color: var(--gray-500);
+    font-size: 32px;
+    font-weight: 800;
+}

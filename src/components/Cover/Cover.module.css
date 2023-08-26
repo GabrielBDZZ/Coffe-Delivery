@@ -1,0 +1,65 @@
+.cover {
+    display: flex;
+    margin: 95px 160px;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h1 {
+    font-family: 'Baloo 2', cursive;
+    font-weight: 800;
+    color: var(--gray-700);
+    font-size: 48px;
+    text-align: start;
+    box-sizing: border-box;
+    width: 600px;
+}
+
+.description {
+    color: var(--gray-700);
+    font-size: 20px;
+    text-align: start;
+
+    box-sizing: border-box;
+    width: 550px;
+    margin-top: 16px;
+    margin-bottom: 66px;
+}
+
+.values, .values2 {
+    display: flex;
+    box-sizing: border-box;
+    width: 700px;
+}
+
+.values p, .values2 p {
+    width: 300px;
+    font-size: 16px;
+    color: var(--gray-300);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart, .timer, .package, .coffee {
+    color: var(--white);
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    padding: 8px;
+    margin-right: 12px;
+}
+.cart, .timer, .package, .coffee {
+    background: var(--yellow-dark);
+}
+.timer {
+    background: var(--yellow);
+}
+
+.package {
+    background: var(--gray-300);
+}
+
+.coffee {
+    background: var(--purple);
+}
