@@ -29,8 +29,6 @@ export function Order() {
         return selectedPaymentMethod !== null;
     }
 
-
-
     const navigate = useNavigate()
 
     const deliveryCost = 4.99
@@ -47,15 +45,11 @@ export function Order() {
         setTotalItems(valueTotal)
         setTotalValue(totalValueWithDelivery);
     }, [cartItems, deliveryCost])
-    
-    useEffect(() => {
-        calculateTotal()
-    }, [calculateTotal])
 
     const handleConfirmOrder = () => {
         navigate('/sucess')
+        localStorage.clear()
     }
-    
 
     const handleRemoveItem = (itemToRemove: CartItem) => {
         const updatedCartItems = cartItems.filter(
