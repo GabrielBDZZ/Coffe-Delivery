@@ -4,14 +4,17 @@ import { Header } from './components/Header/Header'
 import { Router } from './Router'
 
 import './global.css'
+import { AddressProvider } from './components/AddressProvider'
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <Header/>
-      <Router/>
-    </BrowserRouter>
+    <AddressProvider>
+      <BrowserRouter>
+        <Header/>
+        <Router/>
+      </BrowserRouter>
+    </AddressProvider>
   )
 }
 

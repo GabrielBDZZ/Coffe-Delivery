@@ -91,6 +91,10 @@
     cursor: pointer;
 }
 
+.cartButton:hover {
+    background: var(--purple);
+}
+
 .cart {
     color: var(--white);
     background: none;

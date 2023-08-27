@@ -42,3 +42,16 @@
     line-height: 160%;
     cursor: pointer;
 }
+
+.confirm:disabled {
+    opacity: 70%;
+    cursor: not-allowed;
+}
+
+.confirm:disabled:hover {
+    background: var(--yellow);
+}
+
+.confirm:hover {
+    background: var(--yellow-dark);
+}

@@ -32,6 +32,23 @@
     width: 38px;
 }
 
+.cartItemCount {
+    position: absolute;
+    /* z-index: 1; */
+    background: var(--yellow-dark);
+    border-radius: 100%;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    padding-top: 2.5px;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
 .buttons {
     display: flex;
     background: none;

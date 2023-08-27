@@ -2,15 +2,12 @@ import { MapPin, Timer, CurrencyDollarSimple } from '@phosphor-icons/react'
 
 import sucess from '../../assets/sucess.svg'
 import styles from './Sucess.module.css'
-import { AddressContext } from '../../components/Adress/Adress'
-import { useContext } from 'react'
+import { useAddressContext } from '../../components/AddressProvider'
 
 export function Sucess() {
-    const {addressData} = useContext(AddressContext)
-    // console.log(addressData.rua)
+    const { addressData, selectedPaymentMethod } = useAddressContext()
 
-    return(
-        <AddressContext.Provider value={{addressData}}>
+    return(  
             <div className={styles.sucess}>
                 <div className={styles.title}>
                     <h1>Uhu! Pedido confirmado</h1>
@@ -22,10 +19,10 @@ export function Sucess() {
                         <>
                             <p className={styles.map}>
                                 <MapPin className={styles.mapPin} size={16} weight="fill" />
-                                Entregar em {addressData.rua}, 99 <br /> Jardim Nobre - Rolândia, PR
+                                Entregar em {addressData.rua}, {addressData.numero} <br />{addressData.bairro} - {addressData.cidade}, {addressData.estado}
                             </p>
                             <p className={styles.time}><Timer className={styles.timer} size={16} weight="fill" />Previsão de entrega <br />20min - 30 min</p>
-                            <p className={styles.payment}><CurrencyDollarSimple className={styles.dollar} size={16} />Pagamento na entrega <br />Cartão de Crédito</p>
+                            <p className={styles.payment}><CurrencyDollarSimple className={styles.dollar} size={16} />Pagamento na entrega <br />{selectedPaymentMethod}</p>
                         </>
                         ) : (
                         <p>Carregando...</p>
@@ -34,6 +31,5 @@ export function Sucess() {
                     <img src={sucess}/>
                 </div>
             </div>
-        </AddressContext.Provider>
     )
 }

@@ -1,35 +1,15 @@
 import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from '@phosphor-icons/react'
 import styles from './Adress.module.css'
-import { createContext, useState } from 'react';
-
-interface AddressData {
-    cep: string,
-    rua: string,
-    numero: string,
-    complemento: string,
-    bairro: string,
-    cidade: string,
-    estado: string
-}
-
-interface AddressContextData {
-    addressData: AddressData
-}
-
-export const AddressContext = createContext({} as AddressContextData)
-
+import { AddressData, useAddressContext } from '../AddressProvider';
 
 export function Adress() {
+    const { setAddressData,selectedPaymentMethod, setSelectedPaymentMethod } = useAddressContext()
 
-    const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<string | null>(null)
+    
 
     const handlePaymentButtonClick = (method: string) => {
       setSelectedPaymentMethod(method);
     }
-
-    const [addressData, setAddressData] = useState({})
-
-    console.log(addressData)
 
     const handleAddressInputChange = (field: keyof AddressData, value: string) => {
         setAddressData(prevData => ({
@@ -52,16 +32,16 @@ export function Adress() {
                     <p>Informe o endereço onde deseja receber seu pedido</p>
                 </div>
             </div>
-                <input className={styles.cep} inputMode='numeric' minLength={8} maxLength={8} placeholder="CEP" required/>
+                <input className={styles.cep} onChange={e => handleAddressInputChange('cep', e.target.value)} inputMode='numeric' minLength={8} maxLength={8} placeholder="CEP" required/>
                 <input className={styles.rua} onChange={e => handleAddressInputChange('rua', e.target.value)} placeholder="Rua" required/>
                 <div className={styles.inline}>
-                    <input className={styles.numero} placeholder="Número" inputMode='numeric' required/>
-                    <input className={styles.complemento} placeholder="Complemento"/>
+                    <input className={styles.numero} onChange={e => handleAddressInputChange('numero', e.target.value)} placeholder="Número" inputMode='numeric' required/>
+                    <input className={styles.complemento} onChange={e => handleAddressInputChange('complemento', e.target.value)} placeholder="Complemento"/>
                 </div>
                 <div className={styles.inline2}>
-                    <input className={styles.bairro} placeholder="Bairro" required/>
-                    <input className={styles.cidade} placeholder="Cidade" required/>
-                    <input className={styles.estado} placeholder="UF" minLength={2} maxLength={2} required/>
+                    <input className={styles.bairro} onChange={e => handleAddressInputChange('bairro', e.target.value)} placeholder="Bairro" required/>
+                    <input className={styles.cidade} onChange={e => handleAddressInputChange('cidade', e.target.value)} placeholder="Cidade" required/>
+                    <input className={styles.estado} onChange={e => handleAddressInputChange('estado', e.target.value)} placeholder="UF" minLength={2} maxLength={2} required/>
                 </div>
             </div>
             <div className={styles.payment}>
@@ -76,20 +56,20 @@ export function Adress() {
                 </div>
                 <div className={styles.buttons}>
                     <button
-                    className={`${selectedPaymentMethod === 'credit-card' ? styles.selected : ''}`}
-                    onClick={() => handlePaymentButtonClick('credit-card')}
+                    className={`${selectedPaymentMethod === 'CARTÃO DE CRÉDITO' ? styles.selected : ''}`}
+                    onClick={() => handlePaymentButtonClick('CARTÃO DE CRÉDITO')}
                     >
                         <CreditCard size={16} /> CARTÃO DE CRÉDITO
                     </button>
                     <button
-                    className={` ${selectedPaymentMethod === 'debit-card' ? styles.selected : ''}`}
-                    onClick={() => handlePaymentButtonClick('debit-card')}
+                    className={` ${selectedPaymentMethod === 'CARTÃO DE DÉBITO' ? styles.selected : ''}`}
+                    onClick={() => handlePaymentButtonClick('CARTÃO DE DÉBITO')}
                     >
                         <Bank size={16} /> CARTÃO DE DÉBITO
                     </button>
                     <button
-                    className={` ${selectedPaymentMethod === 'cash' ? styles.selected : ''}`}
-                    onClick={() => handlePaymentButtonClick('cash')}
+                    className={` ${selectedPaymentMethod === 'DINHEIRO' ? styles.selected : ''}`}
+                    onClick={() => handlePaymentButtonClick('DINHEIRO')}
                     >
                         <Money size={16} /> DINHEIRO
                     </button>

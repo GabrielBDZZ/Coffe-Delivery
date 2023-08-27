@@ -5,11 +5,31 @@ import styles from './Order.module.css'
 import { CoffeData } from "../Coffe/CoffeData"
 import { formatCurrency } from "../Format"
 import { useNavigate } from "react-router-dom"
+import { useAddressContext } from "../AddressProvider"
 
 export function Order() {
-    const [cartItems, setCartItems] = useState<CartItem[]>([])
+
     const [totalItems, setTotalItems] = useState<number>(0)
     const [totalValue, setTotalValue] = useState<number>(0)
+
+    const { addressData, selectedPaymentMethod, cartItems, setCartItems } = useAddressContext()
+
+    const isAddressFilled = () => {
+        return (
+            addressData.cep !== '' &&
+            addressData.rua !== '' &&
+            addressData.numero !== '' &&
+            addressData.bairro !== '' &&
+            addressData.cidade !== '' &&
+            addressData.estado !== ''
+        )
+    }
+
+    const isPaymentMethodSelected = () => {
+        return selectedPaymentMethod !== null;
+    }
+
+
 
     const navigate = useNavigate()
 
@@ -65,7 +85,7 @@ export function Order() {
                     <p>Total de itens <p>{formatCurrency(totalItems)}</p></p>
                     <p>Entrega <p>{formatCurrency(deliveryCost)}</p></p>
                     <p className={styles.total}>Total <p>{formatCurrency(totalValue)}</p></p>
-                    <button onClick={handleConfirmOrder} className={styles.confirm}>CONFIRMAR PEDIDO</button>
+                    <button disabled={!isAddressFilled() || !isPaymentMethodSelected()} onClick={handleConfirmOrder} className={styles.confirm}>CONFIRMAR PEDIDO</button>
                 </div>
         </div>
     )

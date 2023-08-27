@@ -14,7 +14,6 @@
 
 .description {
     background: none;
-    /* margin-left: 20px; */
 }
 
 .orderContent p {
@@ -31,6 +30,11 @@
     border-radius: 6px;
     color: var(--gray-300);
     cursor: pointer;
+}
+
+.trashButton:hover {
+    background: var(--gray-000);
+    color: var(--gray-500);
 }
 
 .trash {

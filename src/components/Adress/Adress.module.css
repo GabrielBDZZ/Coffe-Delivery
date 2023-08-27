@@ -66,14 +66,16 @@ h2 {
     height: 42px;
     margin-top: 16px;
     margin-right: 12px;
-}
-
-.adress input:focus {
-    border: 1px solid var(--purple);
+    color: var(--gray-500);
 }
 
 .cep, .numero, .bairro {
     width: 200px;
+}
+
+.adress input:focus {
+    outline: 1px solid var(--yellow-dark);
+    outline-offset: -1px;
 }
 
 .rua {
@@ -113,6 +115,11 @@ h2 {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.buttons button:hover {
+    background: var(--gray-000);
+    color: var(--gray-500);
 }
 
 .payment button > svg{
